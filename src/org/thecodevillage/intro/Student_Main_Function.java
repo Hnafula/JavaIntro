@@ -13,59 +13,49 @@ public class Student_Main_Function {
 
     public static void main(String [] args){
 
-        List<Student> students = new ArrayList<Student>();
+       // List<Student> student = new ArrayList<Student>();
 
         Scanner scann = new Scanner(System.in);
 
-       //StudentMain st = new StudentMain();
-        //int noOfStudents = 0;
-        System.out.println("Enter no of students");
-        int noOfStudents = scann.nextInt();
+       Student st = new Student();
 
-        System.out.println("Enter name of students");
-        String studentName = scann.next();
+        //System.out.println("Enter no of students");
+       // scann.nextInt();
+
+        //noOfStudents;
+
+        System.out.println("Enter name of student");
+        st.setName(scann.next());
+
+               // st.setName(scann.next());
+
+
 
         System.out.println("Enter student marks");
-       int markOfStudent = scann.nextInt();
+       //int markOfStudent= scann.nextInt();
+       st.setMarks(scann.nextInt());
 
-        String grade = "";
 
-        if (  markOfStudent>= 80 && markOfStudent <=100)
-        {
-            grade ="A";
-            //System.out.println("grade is A");
-        }
+        System.out.println("Students name is:"+st.getName()+"\t\t\t"+"and mark is:"+st.getMarks());
 
-        if (markOfStudent >= 60 && markOfStudent <80)
-        {
-            System.out.println("B");
-            grade ="B";
-        }
-        if (markOfStudent >= 40 && markOfStudent <60)
-        {
-            System.out.println("c");
-        }
-        if (markOfStudent <=0 && markOfStudent >40)
-        {
-            System.out.println("D");
-        }
-        else if(markOfStudent < 0 && markOfStudent >100 )
-        {
-            System.out.println("enter valid mark");
-        }
+        List<Student> student = new ArrayList<Student>();
 
-        System.out.println("Students name is:"+studentName+"\t\t\t"+"and mark is:"+markOfStudent);
+        int noOfStudents=0;
 
         for (int i = 0; i < noOfStudents; i++) {
-               StudentMain student=new StudentMain();
 
-            //student.setName("");
+              Student student1=new Student();
 
-               scann.next();
+           System.out.println("Enter no of students");
+            scann.nextInt();
 
-               students.add(scann.next());
+            student1.setName(scann.next());
+
+            student1.setMarks(scann.nextInt());
+
+              student.add(student1);
         }
-        System.out.println (students.size());
+       System.out.println (student.size());
 
                }
     }

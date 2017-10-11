@@ -33,4 +33,14 @@ public class MyFunctions {
 
         return (a%b);
     }
+
+    public static int calculateArea(int lenght, int width)
+    {
+        return lenght*width;
+    }
+
+    public static int calculatePerimeter(int lenght, int width)
+    {
+        return 2*(lenght+width);
+    }
 }
